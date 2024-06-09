@@ -3,3 +3,5 @@
 
 ```bash
 npm i persian-validate
+```
+ads
