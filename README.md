@@ -49,6 +49,14 @@ console.log(validateUsernameRe("user"));     // false (بدون عدد)
 console.log(validateUsernameRe("user123"));  // false (بدون کاراکتر _)
 console.log(validateUsernameRe("user@123")); // false (کاراکتر غیر مجاز)
 ```
+این تابع validateUrl یک URL را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک URL معتبر است یا خیر.
+```javascript
+ console.log(validateUrl("https://www.example.com")); // true
+console.log(validateUrl("example.com"));            // false (نیاز به پروتکل)
+console.log(validateUrl("ftp://ftp.example.com"));  // true
+console.log(validateUrl("not_a_valid_url"));        // false (ساختار نامعتبر)
+
+```
 # ویژگی ها
 این کتابخانه این توابع رو داره:
 |<table>
