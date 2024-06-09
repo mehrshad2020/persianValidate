@@ -75,9 +75,42 @@ console.log(valiDatePhoneNumber("09223456789")); // true
 console.log(valiDatePhoneNumber("0912abcd567")); // false (شامل حروف الفبا)
 console.log(valiDatePhoneNumber("09301234567")); // true
 console.log(valiDatePhoneNumber("09991234567")); // false (شماره دوم 9 نمی‌تواند 9 باشد)
-
 ```
+این تابع validatePersianName یک نام فارسی را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک نام معتبر است یا خیر.
 
+```javascript
+import { validatePersianName } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validatePersianName("محمد رضا"));      // true
+console.log(validatePersianName("Ali Reza"));      // false (حروف لاتین)
+console.log(validatePersianName("سارا خانم"));    // true
+console.log(validatePersianName("رضا. احمدی"));  // true
+```
+این تابع validatePassword یک رمز عبور را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک رمز عبور قابل قبول است یا خیر.
+```javascript
+import { validatePassword } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validatePassword("StrongPassword123!")); // true
+console.log(validatePassword("weak"));              // false (کوتاه)
+console.log(validatePassword("short123"));         // false (بدون حرف بزرگ)
+console.log(validatePassword("noSymbol123"));      // false (بدون نماد)
+```
+این تابع validateNationalCode یک کد ملی ایرانی را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک کد ملی معتبر است یا خیر.
+```javascript
+import { validateNationalCode } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validateNationalCode("0123456789")); // true
+console.log(validateNationalCode("1234567890")); // false
+```
+این تابع validateObject یک شیء را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک شیء معتبر است یا خیر.
+
+
+```javascript
+import { validateObject } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validateObject({}));         // true
+console.log(validateObject([]));         // true (آرایه نیز یک نوع از شیء است)
+console.log(validateObject(null));       // false
+console.log(validateObject(123));        // false
+console.log(validateObject("string"));   // false
+```
+در این تابع:
 # ویژگی ها
 این کتابخانه این توابع رو داره:
 |<table>
