@@ -48,7 +48,7 @@ or
             <td>
                 <table>
                     <tbody>
-                        <tr>
+                        <tr dir="rtl">
                             <td>وظیفه برسی کردن فرمت فایل عکسی رو داره اگر فرمت فایل ["png","jpg"] به ما true میده در غیر این صورت false:</td>
                         </tr>
                     </tbody>
