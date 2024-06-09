@@ -23,3 +23,13 @@ npm i persian-validate
  validateImageExtension("mehrshad.png") //true
  validateImageExtension("mehrshad.svg") //false
 ```
+اگر به صورت لینک شده از کتابخانه استفاده شده در html باز هم به توابع دسترسی دارید:
+```html
+ <script src="https://cdn.jsdelivr.net/gh/mehrshad2020/persianValidate/persianValidate.js"></script>
+or
+<script src="persianValidate.js"></script>
+```
+```javascript
+ validateImageExtension("mehrshad.png") //true
+ validateImageExtension("mehrshad.svg") //false
+```
