@@ -110,6 +110,17 @@ console.log(validateObject(null));       // false
 console.log(validateObject(123));        // false
 console.log(validateObject("string"));   // false
 ```
+این تابع valiDateJalali یک تاریخ شمسی را به عنوان ورودی می‌گیرد و آن را بررسی می‌کند که آیا یک تاریخ معتبر است یا خیر.
+
+```javascript
+import { valiDateJalali } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(valiDateJalali("1400/02/30")); // true
+console.log(valiDateJalali("1400/06/31")); // false (ماه ششم نمی‌تواند بیشتر از ۳۰ روز داشته باشد)
+console.log(valiDateJalali("1400/12/29")); // true
+console.log(valiDateJalali("15000/12/29")); // false (سال نامعتبر)
+console.log(valiDateJalali("1400/13/29")); // false (ماه نامعتبر)
+console.log(valiDateJalali("1400/12")); // false (فرمت نادرست)
+```
 در این تابع:
 # ویژگی ها
 این کتابخانه این توابع رو داره:
