@@ -35,3 +35,7 @@ or
 ```
 # ویژگی ها
 این کتابخانه این توایع رو داره:
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
