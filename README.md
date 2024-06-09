@@ -33,6 +33,5 @@ or
  validateImageExtension("mehrshad.png") //true
  validateImageExtension("mehrshad.svg") //false
 ```
-#ویژگی ها
+# ویژگی ها
 این کتابخانه این توایع رو داره:
- | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11 |
