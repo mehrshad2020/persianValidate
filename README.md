@@ -1,4 +1,4 @@
-# نصب و استفاده
+# نحوه نصب 
 نحوه نصب با npm
 
 ```bash
@@ -12,3 +12,4 @@ npm i persian-validate
 ```html
 <script src="persianValidate.js"></script>
 ```
+# نحوه استفاده
