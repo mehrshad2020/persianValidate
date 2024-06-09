@@ -33,6 +33,13 @@ or
  validateImageExtension("mehrshad.png") //true
  validateImageExtension("mehrshad.svg") //false
 ```
+این تابع validateUsernameRe یک نام کاربری را به عنوان ورودی می‌گیرد تابع سپس با استفاده از regex.test(username) اعتبارسنجی نام کاربری را انجام می‌دهد و مقدار بولی (true یا false) را برمی‌گرداند.
+```javascript
+console.log(validateUsernameRe("user_123")); // true
+console.log(validateUsernameRe("user"));     // false (بدون عدد)
+console.log(validateUsernameRe("user123"));  // false (بدون کاراکتر _)
+console.log(validateUsernameRe("user@123")); // false (کاراکتر غیر مجاز)
+```
 # ویژگی ها
 این کتابخانه این توابع رو داره:
 |<table>
@@ -59,3 +66,4 @@ or
     </thead>
     <tbody></tbody>
 </table>
+
