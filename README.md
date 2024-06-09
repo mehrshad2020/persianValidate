@@ -23,6 +23,15 @@ npm i persian-validate
  validateImageExtension("mehrshad.png") //true
  validateImageExtension("mehrshad.svg") //false
 ```
+نحوه وارد کردن چند تابع با هم:
+```javascript
+ import { validateImageExtension,validateUsernameRe } from "persian-validate"
+ validateImageExtension("mehrshad.png") //true
+ validateImageExtension("mehrshad.svg") //false
+console.log(validateUsernameRe("user_123")); // true
+console.log(validateUsernameRe("user"));     // false (بدون عدد)
+```
+
 اگر به صورت لینک شده از کتابخانه استفاده شده در html باز هم به توابع دسترسی دارید:
 ```html
  <script src="https://cdn.jsdelivr.net/gh/mehrshad2020/persianValidate/persianValidate.js"></script>
