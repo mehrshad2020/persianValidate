@@ -148,6 +148,18 @@ let file = { size: 1500000 };
 console.log(validateFileSize(file));        // false (بیشتر از 1 مگابایت)
 console.log(validateFileSize(file, 2000000)); // true (کمتر از 2 مگابایت)
 ```
+این تابع valiDateEmail یک آدرس ایمیل را به عنوان ورودی می‌گیرد و بررسی می‌کند که آیا فرمت آن معتبر است یا خیر.
+```javascript
+import { validateEmail } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validateEmail("test@example.com"));  // true
+console.log(validateEmail("test.email@example.com"));  // true
+console.log(validateEmail("test.email+1@example.co.uk"));  // true
+console.log(validateEmail("test.email@subdomain.example.com"));  // true
+console.log(validateEmail("test.email@example"));  // false (بدون دامنه معتبر)
+console.log(validateEmail("test.@example.com"));  // false (نقطه قبل از @)
+console.log(validateEmail("test@example..com"));  // false (دو نقطه متوالی)
+```
+
 
 در این تابع:
 # ویژگی ها
