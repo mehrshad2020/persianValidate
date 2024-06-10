@@ -160,32 +160,3 @@ console.log(validateEmail("test.@example.com"));  // false (نقطه قبل از
 console.log(validateEmail("test@example..com"));  // false (دو نقطه متوالی)
 ```
 
-
-در این تابع:
-# ویژگی ها
-این کتابخانه این توابع رو داره:
-|<table>
-    <caption>
-        <p>Table 1</p>
-    </caption>
-    <thead>
-        <tr>
-            <th>توضیحات</th>
-            <th>تابع</th>
-        </tr>
-        <tr>
-            <td>
-                <table>
-                    <tbody>
-                        <tr dir="rtl">
-                            <td>وظیفه برسی کردن فرمت فایل عکسی رو داره اگر فرمت فایل ["png","jpg"] به ما true میده در غیر این صورت false:</td>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-            <td>validateImageExtension</td>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
-
