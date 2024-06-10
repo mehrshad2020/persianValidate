@@ -121,6 +121,34 @@ console.log(valiDateJalali("15000/12/29")); // false (سال نامعتبر)
 console.log(valiDateJalali("1400/13/29")); // false (ماه نامعتبر)
 console.log(valiDateJalali("1400/12")); // false (فرمت نادرست)
 ```
+این تابع validatefuction یک ورودی func را دریافت می‌کند و بررسی می‌کند که آیا نوع آن تابع است یا خیر.
+```javascript
+import { validatefuction } from "persian-validate" // نحوه وارد کردن از طریق import
+console.log(validatefuction(function() {})); // true
+console.log(validatefuction(() => {}));       // true (تابع پیکانی)
+console.log(validatefuction(123));            // false
+console.log(validatefuction("hello"));        // false
+console.log(validatefuction({}));             // false
+console.log(validatefuction([]));             // false
+```
+این تابع validateFileSize یک فایل را به عنوان ورودی می‌گیرد و بررسی می‌کند که آیا اندازه فایل کمتر از یا برابر با یک اندازه حداکثری مشخص (به بایت) است یا خیر.file یک شیء فایل است که باید دارای یک ویژگی size باشد که اندازه فایل را به بایت نشان می‌دهد.
+maxSize به طور پیش‌فرض برابر با 1024000 بایت (1 مگابایت) تنظیم شده است، اما می‌تواند به هر مقدار دیگری نیز تنظیم شود.
+تابع بررسی می‌کند که آیا file.size کمتر از یا برابر با maxSize است و مقدار بولی (true یا false) را برمی‌گرداند.
+فرض کنید یک فایل با اندازه 500000 بایت داریم:
+```javascript
+import { validateFileSize } from "persian-validate" // نحوه وارد کردن از طریق import
+let file = { size: 500000 };
+console.log(validateFileSize(file));        // true (کمتر از 1 مگابایت)
+console.log(validateFileSize(file, 400000)); // false (بیشتر از 400 کیلوبایت)
+```
+فرض کنید یک فایل با اندازه 1500000 بایت داریم:
+```javascript
+import { validateFileSize } from "persian-validate" // نحوه وارد کردن از طریق import
+let file = { size: 1500000 };
+console.log(validateFileSize(file));        // false (بیشتر از 1 مگابایت)
+console.log(validateFileSize(file, 2000000)); // true (کمتر از 2 مگابایت)
+```
+
 در این تابع:
 # ویژگی ها
 این کتابخانه این توابع رو داره:
